@@ -1,0 +1,31 @@
+{
+  "name": "nodeemailcleanuptool",
+  "version": "1.0.0",
+  "description": "This program is useful for bulk analysing emails (google only), unsubscribing to emails and making emails from particular senders as \"to be deleted\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Revanth Nemani",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "googleapis": "^144.0.0",
+    "nodeemailcleanuptool": "file:",
+    "open": "^10.1.0",
+    "p-queue": "^8.0.1",
+    "readline": "^1.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RevanthNemani/node-gmail-cleanup-tool.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RevanthNemani/node-gmail-cleanup-tool/issues"
+  },
+  "homepage": "https://github.com/RevanthNemani/node-gmail-cleanup-tool#readme"
+}
