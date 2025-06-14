@@ -4,7 +4,7 @@
   "description": "This program is useful for bulk analysing emails (google only), unsubscribing to emails and making emails from particular senders as \"to be deleted\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha \"tests/**/*.test.mjs\""
   },
   "keywords": [],
   "author": "Revanth Nemani",
@@ -18,6 +18,8 @@
     "readline": "^1.3.0"
   },
   "devDependencies": {
+    "chai": "^5.2.0",
+    "mocha": "^11.6.0",
     "nodemon": "^3.1.4"
   },
   "repository": {
