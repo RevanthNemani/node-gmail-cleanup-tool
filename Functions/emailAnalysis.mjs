@@ -52,6 +52,11 @@ async function fetchEmails(auth) {
             const messages = res.data.messages || [];
             pageToken = res.data.nextPageToken;
 
+            if (messages.length === 0) {
+                console.warn('No messages returned from API, stopping early to prevent infinite loop.');
+                break;
+            }
+
             const batchSize = Math.min(messages.length, totalEmails - fetchedEmails);
             fetchedEmails += batchSize;
 
