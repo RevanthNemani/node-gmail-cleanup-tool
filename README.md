@@ -59,7 +59,7 @@ nodeEmailCleanupTool
    SHEET_ID_LABEL=1HvvqY3mkPQMnj4mto7_UJQZFSiytnY-NxhsrGlrTfGI
    SHEET_ID_UNSUBSCRIBE=1w68R_-HH0kIKpv_oaBzZCCEYet1ihPpvvo4p395CIMg
    REDIRECT_URI_HOST=http://localhost
-   REDIRECT_URI_PORT=8080
+   REDIRECT_URI_PORT=8080   # Change if you prefer a different local port
    REDIRECT_URI_CALLBACK=oauth2callback
 
    PQ_CONCURRENCY_ANALYSIS=30
@@ -75,7 +75,7 @@ nodeEmailCleanupTool
 
    - Go to the Google Cloud Console.
    - Enable the Gmail and Google Sheets APIs for your project.
-   - Create OAuth 2.0 credentials, specifying `http://localhost:8080/oauth2callback` as the redirect URI.
+   - Create OAuth 2.0 credentials, specifying `http://localhost:<port>/oauth2callback` as the redirect URI, where `<port>` matches `REDIRECT_URI_PORT` (default `8080`).
    - Download the `credentials.json` file and place it in the root of your project.
 
 2. **Run any of the scripts (e.g., `emailAnalysis.mjs`)**:

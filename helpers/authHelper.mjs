@@ -54,7 +54,7 @@ function getNewToken(oAuth2Client, callback) {
                 server.close();
             });
         }
-    }).listen(8080, () => {
+    }).listen(parseInt(process.env.REDIRECT_URI_PORT, 10) || 8080, () => {
         open(authUrl);
         console.log('Authorize this app by visiting this URL:', authUrl);
     });
