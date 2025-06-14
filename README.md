@@ -90,7 +90,7 @@ nodeEmailCleanupTool
 ## Script Descriptions
 
 1. **`assignLabel.mjs`**:
-   - Assigns a "to be deleted" label to emails based on a list of senders provided in a Google Sheet"for easy filter delete.
+   - Assigns a "to be deleted" label to emails based on a list of senders provided in a Google Sheet for easy filter delete.
 
 2. **`emailAnalysis.mjs`**:
    - Analyzes your inbox to count emails from different senders and updates a Google Sheet with the results.
