@@ -3,6 +3,7 @@
 import dotenv from 'dotenv';
 import fs from 'fs/promises';
 import { google } from 'googleapis';
+import { pathToFileURL } from 'url';
 import PQueue from 'p-queue';
 import { authorize } from '../helpers/authHelper.mjs';
 
@@ -48,7 +49,7 @@ async function processLabeling(auth) {
 }
 
 // Read unique, non-empty emails from the Google Sheet
-async function readUniqueEmails(sheets) {
+export async function readUniqueEmails(sheets) {
     const sheetId = process.env.SHEET_ID_LABEL; // Your Google Sheet ID
     const range = 'Sheet1!A2:A'; // Assumes emails are listed in column A starting from A2
 
@@ -185,6 +186,8 @@ async function updateSheetWithStatuses(sheets, statusUpdates) {
     }
 }
 
-// Run the main function to start the script
-main().catch(console.error);
+// Run the main function only when executed directly
+if (pathToFileURL(process.argv[1]).href === import.meta.url) {
+    main().catch(console.error);
+}
 
